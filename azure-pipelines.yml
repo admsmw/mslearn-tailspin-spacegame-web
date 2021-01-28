@@ -5,7 +5,8 @@
 
 trigger:
 - '*'
-
+stages:
+- stage: A
 pool:
   vmImage: 'ubuntu-18.04'
   demands:
