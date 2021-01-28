@@ -3,6 +3,8 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+stages:
+- stage:
 trigger:
 - '*'
 
@@ -15,7 +17,6 @@ pool:
     buildConfiguration: 'Release'
     wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
     dotnetSdkVersion: '3.1.300'
-  
   steps:
   - task: UseDotNet@2
     displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
